@@ -100,7 +100,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule],exports: [
+    MatTableModule],
+    exports: [
       MatAutocompleteModule,
       MatCheckboxModule,
       MatDatepickerModule,
