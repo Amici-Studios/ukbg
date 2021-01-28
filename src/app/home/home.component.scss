@@ -1,167 +1,154 @@
 .img-responsive {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+
+.hero-header {
+  h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    padding-top: 115px;
   }
-  
-  .hero-header {
-    h1 {
-      font-size: 45px;
-      line-height: 1.2;
-      padding-top: 115px;
-    }
-  
-    h2 {
-      padding-top: 20px;
-      font-size: 30px;
-      line-height: 1.2;
-      font-weight: 100;
-  
-    }
-  
-    text-align: center;
-    color: white;
-    width: 50%;
-  
-  }
-  
-  .hero {
-    background-image:
-      linear-gradient(rgba(92, 19, 40, 0.377), rgba(0, 0, 0, 0.274)),
-      url(/assets/img/hero.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 80%;
-    background-position: center;
-  
-  }
-  
-  .hero-buttons {
+
+  h2 {
     padding-top: 20px;
-    text-align: center;
-  }
-  
-  .hero-content {
-    width: 700px;
-  }
-  
-  .hero-logo {
-    padding-top: 250px;
-    margin: 0 auto;
-  }
-  
-  
-  .top-content {
-    padding-top: 20px;
-    width: 70%;
-    margin: 0 auto;
-  
-    h1 {
-      text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      color: #5c1327;
-    }
-  }
-  
-  .services-card {
-    img {
-      object-fit: cover;
-      height: 400px;
-    }
-  }
-  
-  .featured {
-    background-color: white;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
-  }
-  
-  .lower-content {
-    margin: 0 auto;
-  }
-  
-  .bottom-content {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
-  
-  .form-width {
-    font-size: 20px;
-  
-  }
-  
-  mat-form-field {
-    width: 350px;
-    padding: 0;
-  }
-  
-  .urgent-help {
-    padding-top: 50px;
-    height: 500px;
-    background-color: #5c1327;
-    text-align: center;
-    color: white;
-  
-    h1 {
-      font-size: 50px;
-    }
-  
-    p {
-      padding-top: 15px;
-      font-size: 30px;
-    }
-  }
-  
-  .urgent-images {
-    img {
-      padding: 15px 50px;
-  
-    }
-  }
-  
-  .blog-cards {
-    mat-card-header {
-      color: #5c1327;
-    }
-  
-    mat-card-title {
-      font-size: 25px;
-      font-family: montserrat;
-  
-    }
-  
-    mat-card-subtitle {
-      font-size: 16px;
-    }
-  
-    mat-card-content {
-      h1 {
-        text-align: left;
-        font-size: 20px;
-        color: #1D2143;
-  
-      }
-    }
-  
-  }
-  
-  .material-icons {
-    vertical-align: middle;
     font-size: 30px;
+    line-height: 1.2;
+    font-weight: 100;
+  }
+
+  text-align: center;
+  color: white;
+  width: 50%;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(92, 19, 40, 0.377), rgba(0, 0, 0, 0.274)), url(/assets/img/hero.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 80%;
+  background-position: center;
+}
+
+.hero-buttons {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.hero-content {
+  width: 700px;
+}
+
+.hero-logo {
+  padding-top: 250px;
+  margin: 0 auto;
+}
+
+.top-content {
+  padding-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
     color: #5c1327;
   }
-  
-  .our-purpose {
-    box-shadow: 0 0.125rem 1.125rem 0.1875rem rgba(10, 10, 10, 0.12)
+}
+
+.services-card {
+  img {
+    object-fit: cover;
+    height: 400px;
   }
-  
-  .example-card {
-    margin-bottom: 15px;
-  
-  
-    img {
-      height: 300px;
-      object-fit: cover;
+}
+
+.featured {
+  background-color: white;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+}
+
+.lower-content {
+  margin: 0 auto;
+}
+
+.bottom-content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.form-width {
+  font-size: 20px;
+}
+
+mat-form-field {
+  width: 350px;
+  padding: 0;
+}
+
+.urgent-help {
+  padding-top: 50px;
+  height: 500px;
+  background-color: #5c1327;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    padding-top: 15px;
+    font-size: 30px;
+  }
+}
+
+.urgent-images {
+  img {
+    padding: 15px 50px;
+  }
+}
+
+.blog-cards {
+  mat-card-header {
+    color: #5c1327;
+  }
+
+  mat-card-title {
+    font-size: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+
+  mat-card-subtitle {
+    font-size: 16px;
+  }
+
+  mat-card-content {
+    h1 {
+      text-align: left;
+      font-size: 20px;
+      color: #1d2143;
     }
   }
-  
+}
+
+.material-icons {
+  vertical-align: middle;
+  font-size: 30px;
+  color: #5c1327;
+}
+
+.our-purpose {
+  box-shadow: 0 0.125rem 1.125rem 0.1875rem rgba(10, 10, 10, 0.12);
+}
+
+.example-card {
+  margin-bottom: 15px;
+
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
