@@ -1,0 +1,58 @@
+.t-bar {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+
+  a:hover {
+    cursor: pointer;
+    color: #8e1913;
+    transition: 0.2s;
+  }
+}
+
+mat-toolbar {
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.menu {
+
+  a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #2a2f33;
+    font-family: montserrat;
+  }
+}
+
+.mat-flat-button {
+  background-color: white;
+}
+
+.right-align {
+  flex: 1 1 auto;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: montserrat;
+}
+
+.example-full-width {
+  width: 300px;
+  padding-right: 100px;
+}
