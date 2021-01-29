@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 export class FirestoreService {
   constructor(private firestore: AngularFirestore) {}
 
-  getOffices(countryCollectionId, countyDocId, officeCollectionId) {
+  getOffices(countryCollectionId: string, countyDocId: string, officeCollectionId: string) {
     return this.firestore
       .collection(countryCollectionId)
       .doc(countyDocId)
@@ -28,7 +28,7 @@ export class FirestoreService {
     return this.firestore.collection('England').doc('Lancashire').collection('Lancashire Office').valueChanges();
   }
 
-  addOffice(countryCollectionId, countyDocId, officeCollectionId) {
+  addOffice(countryCollectionId: string, countyDocId: string, officeCollectionId: string) {
     return this.firestore.collection(countryCollectionId).doc(countyDocId).collection(officeCollectionId).add;
   }
 
