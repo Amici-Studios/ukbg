@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+<body class="container">
+  <div>
+    <button
+      mat-raised-button
+      (click)="
+        countryCollectionId = 'England'; countyDocId = 'Bedfordshire'; officeCollectionId = 'Bedfordshire Office'; getRegisterOffice()
+      "
+    >
+      Bedfordshire
+    </button>
+    <button mat-raised-button (click)="getLancashireRegisterOffice()">Lancashire</button>
+  </div>
+  {{ countryCollectionId }} <br />
+  {{ countyDocId }} <br />
+  {{ officeCollectionId }} <br />
+  <form class="">
+    <mat-form-field class="example-full-width">
+      <mat-label>Office Name</mat-label>
+      <input type="text" [(ngModel)]="office" name="office" matInput placeholder="Ex. Blackpool Registry Office" />
+    </mat-form-field>
+  </form>
+  <div fxLayout="row" fxLayoutGap="16px" style="margin-bottom: 5px">
+    <mat-card
+      routerLink="/office-info/{{ office.id }}"
+      fxFlex="32"
+      class="example-card"
+      *ngFor="let office of offices | filter: office; let i = index"
+      [@simpleFadeAnimation]="'in'"
+    >
+      <img mat-card-image class="imgsame" [src]="office.imgURL" style="margin-bottom: 0" />
+      <mat-card-content>
+        <mat-card-title style="font-weight: bold; font-family: montserrat; font-size: 18px; margin-top: 5px">{{
+          office.office
+        }}</mat-card-title>
+        <mat-card-subtitle style="font-weight: bold; font-family: montserrat">{{ office.telephone }}</mat-card-subtitle>
+        <p>
+          {{ office.address1 }} <br />
+          {{ office.address2 }} <br />
+          {{ office.city }} <br />
+          {{ office.county }} <br />
+          {{ office.postcode }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutGap="16px" style="margin-bottom: 5px">
+    <mat-card
+      fxFlex="32"
+      class="example-card"
+      *ngFor="let charity of charities?.data.CHC.getCharities.list | filter: office; let i = index"
+      [@simpleFadeAnimation]="'in'"
+    >
+      <img mat-card-image class="imgsame" src="/assets/img/About_Us_Header.jpg" style="margin-bottom: 0" />
+      <mat-card-content>
+        <mat-card-title style="font-weight: bold; font-family: montserrat; font-size: 18px; margin-top: 5px">{{
+          charity.names[0].value
+        }}</mat-card-title>
+        <mat-card-subtitle style="font-weight: bold; font-family: montserrat">{{ charity.contact.phone }}</mat-card-subtitle>
+        <p>
+          {{ charity.contact.address[0] }}
+          <br />
+          {{ charity.contact.address[1] }}
+          <br />
+          {{ charity.contact.address[2] }}
+          <br />
+          {{ charity.contact.postcode }}
+          <br />
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</body>
