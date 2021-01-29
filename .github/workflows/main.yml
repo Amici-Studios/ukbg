@@ -1,23 +1,22 @@
 name: CI
-
-on: push
-    branches: [ master ]
+on:
+  push:
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 8.15.1
-      uses: actions/setup-node@v1
-      with:
-        node-version: 8.15.1
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v2
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages
-        FOLDER: dist/workflows-demo
-        BUILD_SCRIPT: npm install && npm run build -- --prod --base-href="https://amici-studios.github.io/ukbg"
+      - uses: actions/checkout@v1
+      - name: Use Node.js 8.15.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.15.1
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v2
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist/workflows-demo
+          BUILD_SCRIPT: npm install && npm run build -- --prod --base-href="https://amici-studios.github.io/ukbg"
