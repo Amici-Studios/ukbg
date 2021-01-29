@@ -9,6 +9,9 @@ import { OfficeDetailComponent } from './offices/office-detail/office-detail.com
 import { AddOfficeComponent } from './offices/add-office/add-office.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //ANGULAR FIRE
 import { AngularFireModule } from '@angular/fire';
@@ -59,6 +62,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const config = {
   apiKey: 'AIzaSyChHiRyORBpy212F1Jc73RZD6wLpg2BplU',
@@ -123,6 +127,10 @@ const config = {
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -160,6 +168,7 @@ const config = {
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
