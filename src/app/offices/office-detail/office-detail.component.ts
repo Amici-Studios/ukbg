@@ -9,19 +9,25 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class OfficeDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private firestore: FirestoreService) {}
-
+  lancashire: any;
   officeInfo: any;
-  countryCollectionId = 'England';
-  countyDocId = 'Bedfordshire';
-  officeCollectionId = 'Bedfordshire Office';
+  // countryCollectionId = 'England';
+  // countyDocId = 'Bedfordshire';
+  // officeCollectionId = 'Bedfordshire Office';
 
   ngOnInit(): void {
-    this.getRegisterOffice();
+    // this.getRegisterOffice();
   }
-  getRegisterOffice() {
-    this.firestore.getOffices(this.countryCollectionId, this.countyDocId, this.officeCollectionId).subscribe((res) => {
-      this.officeInfo = res;
-      console.log(res);
+  // getRegisterOffice() {
+  //   this.firestore.getOffices(this.countryCollectionId, this.countyDocId, this.officeCollectionId).subscribe((res) => {
+  //     this.officeInfo = res;
+  //     console.log(res);
+  //   });
+  // }
+
+  getLancashireOffice() {
+    this.firestore.getLancashire().subscribe((res) => {
+      this.lancashire = res;
     });
   }
 }
