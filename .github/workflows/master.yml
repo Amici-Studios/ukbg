@@ -1,4 +1,4 @@
-name: Deploy Master
+name: workflow name
 
 on:
   push:
@@ -19,9 +19,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build:ci
+        run: npm build:ci
       - name: Test
-        run: npm run test:ci
+        run: npm test:ci
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
