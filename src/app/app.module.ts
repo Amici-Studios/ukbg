@@ -10,6 +10,13 @@ import { AddOfficeComponent } from './offices/add-office/add-office.component';
 import { EditOfficeComponent } from './offices/office-detail/edit-office/edit-office.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+
+//ANGULAR FIRE
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 //Angular Material Imports
 
 // // Material Form Controls
@@ -54,6 +61,16 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 // import { MatSortModule } from '@angular/material/sort';
 // import { MatTableModule } from '@angular/material/table';
 
+const config = {
+  apiKey: 'AIzaSyChHiRyORBpy212F1Jc73RZD6wLpg2BplU',
+  authDomain: 'register-a-death-d1b73.firebaseapp.com',
+  databaseURL: 'https://register-a-death-d1b73.firebaseio.com',
+  projectId: 'register-a-death-d1b73',
+  storageBucket: 'register-a-death-d1b73.appspot.com',
+  messagingSenderId: '23718682328',
+  appId: '1:23718682328:web:8ee26bbaa5475bf9b641ad',
+  measurementId: 'G-W7T9S4SWCE',
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +84,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     CommonModule,
     // MatAutocompleteModule,
