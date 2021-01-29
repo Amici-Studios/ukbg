@@ -30,10 +30,11 @@ module.exports = function (config) {
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
     reporters: ['progress', 'kjhtml'],
-    ustomLaunchers: {
+    browsers: ['Chrome_no_sandbox'],
+    CustomLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
-        flags: ['--no-sandbox'],
+        flags: ['--no-sandbox', '--disable-web-security', '--disable-gpu'],
       },
     },
     port: 9876,
