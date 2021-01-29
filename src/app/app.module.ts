@@ -23,9 +23,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 // import { MatSliderModule } from '@angular/material/slider';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // // Material Navigation
-// import { MatMenuModule } from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 // import { MatSidenavModule } from '@angular/material/sidenav';
-// import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 // // Material Layout
 import { MatCardModule } from '@angular/material/card';
 // import { MatDividerModule } from '@angular/material/divider';
@@ -78,9 +78,9 @@ import { MatCardModule } from '@angular/material/card';
     // MatSelectModule,
     // MatSliderModule,
     // MatSlideToggleModule,
-    // MatMenuModule,
+    MatMenuModule,
     // MatSidenavModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
@@ -115,9 +115,9 @@ import { MatCardModule } from '@angular/material/card';
     // MatSelectModule,
     // MatSliderModule,
     // MatSlideToggleModule,
-    // MatMenuModule,
+    MatMenuModule,
     // MatSidenavModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
