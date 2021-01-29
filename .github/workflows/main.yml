@@ -1,4 +1,4 @@
-name: workflow name
+name: CI-CD MASTER
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test
+    name: CI - TEST - DEPLOY
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,8 +20,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Test
-        run: npm run test
   deploy:
     runs-on: ubuntu-latest
     needs: build
