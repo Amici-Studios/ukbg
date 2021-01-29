@@ -36,8 +36,8 @@ import { MatCardModule } from '@angular/material/card';
 // import { MatTabsModule } from '@angular/material/tabs';
 // import { MatTreeModule } from '@angular/material/tree';
 // // Material Buttons & Indicators
-// import { MatButtonModule } from '@angular/material/button';
-// import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 // import { MatBadgeModule } from '@angular/material/badge';
 // import { MatChipsModule } from '@angular/material/chips';
 // import { MatIconModule } from '@angular/material/icon';
@@ -89,8 +89,8 @@ import { MatCardModule } from '@angular/material/card';
     // MatStepperModule,
     // MatTabsModule,
     // MatTreeModule,
-    // MatButtonModule,
-    // MatButtonToggleModule,
+    MatButtonModule,
+    MatButtonToggleModule,
     // MatBadgeModule,
     // MatChipsModule,
     // MatIconModule,
@@ -126,8 +126,8 @@ import { MatCardModule } from '@angular/material/card';
     // MatStepperModule,
     // MatTabsModule,
     // MatTreeModule,
-    // MatButtonModule,
-    // MatButtonToggleModule,
+    MatButtonModule,
+    MatButtonToggleModule,
     // MatBadgeModule,
     // MatChipsModule,
     // MatIconModule,
