@@ -1,22 +1,23 @@
 name: CI
-on:
-  push:
+
+on: [push]
     branches: [ master ]
+
 jobs:
   build:
-    runs-on: ubuntu-latest
 
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
+    - name: Use Node.js 8.15.1
+      uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-    - run: npm install
-    - run: npm install -g @angular/cli > /dev/null
-    - run: ng build --prod --output-path=dist --base-href="https://amici-studios.github.io/ukbg"
-    - name: Publish generated content to GitHub Pages
-      uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
-      with:
-          dir: dist
-          branch: gh-pages
-          token: ${{ secrets.ACCESS_TOKEN }}
+        node-version: 8.15.1
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v2
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: dist/workflows-demo
+        BUILD_SCRIPT: npm install && npm run build -- --prod --base-href="https://amici-studios.github.io/ukbg"
