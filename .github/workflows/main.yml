@@ -22,8 +22,8 @@ jobs:
           npm install -g @angular/cli
           npm install
           ng build --prod --base-href="/ukbg/"
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v2
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
