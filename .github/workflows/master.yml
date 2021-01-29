@@ -1,4 +1,4 @@
-name: workflow name
+name: Deploy CI/CD
 
 on:
   push:
@@ -19,9 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm build:ci
-      - name: Test
-        run: npm test:ci
+        run: npm ci
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
