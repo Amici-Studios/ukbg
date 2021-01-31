@@ -32,7 +32,15 @@ export class FirestoreService {
     return this.firestore.collection(countryCollectionId).doc(countyDocId).collection(officeCollectionId).add;
   }
 
-  getOfficeDetails(officeCollectionId: string) {
-    return this.firestore.collection('England').doc(officeCollectionId);
+  getOfficeDetails(id: string) {
+    return this.firestore
+      .collection('England')
+      .doc('Bedfordshire')
+      .collection('Bedfordshire Office')
+      .doc(id)
+      .ref.get()
+      .then(function (doc) {
+        return doc.data();
+      });
   }
 }

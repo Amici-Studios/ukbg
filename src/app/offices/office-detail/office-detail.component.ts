@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../../app/shared/services/firestore.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,24 +11,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class OfficeDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private firestore: FirestoreService) {}
   lancashire: any;
-  officeInfo: any;
-  // countryCollectionId = 'England';
-  // countyDocId = 'Bedfordshire';
-  // officeCollectionId = 'Bedfordshire Office';
-
+  officeDetail: any;
+  id: any;
   ngOnInit(): void {
-    // this.getRegisterOffice();
+    // this.getOfficeDetails();
   }
-  // getRegisterOffice() {
-  //   this.firestore.getOffices(this.countryCollectionId, this.countyDocId, this.officeCollectionId).subscribe((res) => {
-  //     this.officeInfo = res;
-  //     console.log(res);
-  //   });
-  // }
 
-  getLancashireOffice() {
-    this.firestore.getLancashire().subscribe((res) => {
-      this.lancashire = res;
-    });
+  getOfficeDetails() {
+    // const id = this.route.snapshot.paramMap.get('id');
+    // console.log(id);
+    // // this.officeDetail = this.firestore.getOfficeDetails(id);
+    // console.log(this.getOfficeDetails);
   }
 }

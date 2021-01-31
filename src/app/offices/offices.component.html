@@ -23,7 +23,7 @@
   </form>
   <div fxLayout="row" fxLayoutGap="16px" style="margin-bottom: 5px">
     <mat-card
-      routerLink="/office-info/{{ office.id }}"
+      routerLink="{{ office.id }}"
       fxFlex="32"
       class="example-card"
       *ngFor="let office of offices | filter: office; let i = index"
