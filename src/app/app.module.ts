@@ -63,6 +63,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { GrievingComponent } from './pages/grief/grieving/grieving.component';
+import { NewlyBereavedComponent } from './pages/grief/newly-bereaved/newly-bereaved.component';
 
 const config = {
   apiKey: 'AIzaSyChHiRyORBpy212F1Jc73RZD6wLpg2BplU',
@@ -83,6 +85,8 @@ const config = {
     AddOfficeComponent,
     HeaderComponent,
     FooterComponent,
+    GrievingComponent,
+    NewlyBereavedComponent,
   ],
   imports: [
     BrowserModule,

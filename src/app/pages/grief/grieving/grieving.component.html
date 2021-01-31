@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+  <img class="header" src="assets/img/Grieving1.jpg" alt="" />
+  <div class="container">
+    <h1>The Grieving Process</h1>
+    <div class="line-break-red"></div>
+    <div class="text-one">
+      <div fxFlex="70%" class="left-text">
+        <p>
+          Many people think of grief as a single instance or short time of pain or sadness in response to a loss – like the tears shed at a
+          loved one’s funeral. But grieving includes the entire emotional process of coping with a loss, and it can last a long time. Normal
+          grieving allows us to let a loved one go and keep on living in a healthy way. <br />
+          <br />
+          Grieving involves many different emotions, actions, and expressions, all of which help the person come to terms with the loss of a
+          loved one. But keep in mind, grief doesn’t look the same for everyone. And, every loss is different. <br />
+          <br />
+          Grieving is painful, and it’s important that those who have suffered a loss be allowed to express their grief. It’s also important
+          that they be supported throughout the process. Each person grieves differently. The length and intensity of the emotions people go
+          through varies from person to person. <br />
+          <br />
+          Although grief is described in phases or stages, it may feel more like a roller coaster, with ups and downs that make it hard for
+          the bereaved person to feel any progress in dealing with the loss. A person may feel better for a while, only to become sad again.
+          Sometimes, people wonder how long the grieving process will last, and when they can expect some relief. There’s no answer to this
+          question, but some of the factors that affect the intensity and length of grieving are; Your relationship with the person who
+          died, the circumstances of their death and your own life experiences.
+        </p>
+      </div>
+      <div fxFlex class="right-content img-fluid">
+        <img src="assets/img/local-services-search.jpg" alt="" />
+        <img src="assets/img/maxresdefault.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="text-two red-content">
+    <div class="container">
+      <div class="text-one">
+        <div fxFlex class="right-content img-fluid">
+          <img src="assets/img/Samaritans-Number.jpg" alt="" />
+        </div>
+        <div fxFlex="70%" class="right-text">
+          <h2>Grief Can Take Unexpected Forms</h2>
+          <div class="line-break-white"></div>
+          <p>
+            Difficult relationships with the deceased prior to death can cause unique grieving experiences for loved ones. In addition,
+            prolonged illnesses can also cause grief to take unexpected forms. <br />
+            <br />
+            A person who had a difficult relationship with the deceased (a parent who was abusive, estranged, or abandoned the family, for
+            example) is often surprised by the painful emotions they have after their death. It’s not uncommon to have profound distress as
+            the bereaved mourns the relationship he or she had wished for with the person who died, and lets go of any chance of achieving
+            it. Others might feel relief, while some may wonder why they feel nothing at all at the death of such a person. Regret and guilt
+            are common, too. This is all a normal part of the process of adjusting and letting go.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Lates Blog Posts</h1>
+    <div class="line-break-red"></div>
+    <div>
+      <div fxFlex *ngFor="let post of posts; let i = index">
+        <div class="cards">
+          <mat-card [routerLink]="['/grieving', post.id]" appMaterialElevation raisedElevation="16" fxflex>
+            <mat-card-header>
+              <mat-card-title>{{ post.title.rendered }}</mat-card-title>
+              <mat-card-subtitle>{{ post.date | date: 'EEEE,  MMMM d , y' }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ post.main_image.guid }}" alt="Photo of a Shiba Inu" />
+            <mat-card-content>
+              <h2>
+                Read More
+                <span class="material-icons"> arrow_forward </span>
+              </h2>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="second-content">
+  <h1>Lates App Blog Posts</h1>
+  <div class="cardList">
+    <ng-container *ngFor="let post of posts; let i = index">
+      <div *ngIf="i < 4" class="cardListItem" style="border: 1px solid black;">
+        <a href="" [routerLink]="['/grieving', post.id]"> <img width="100%" src="{{ post.main_image.guid }}" alt="" /> </a>
+        <h3 [innerHTML]="post.title.rendered"></h3>
+        <h4 [innerHTML]="post.subtitle"></h4>
+      </div>
+    </ng-container>
+  </div>
+</div> -->
