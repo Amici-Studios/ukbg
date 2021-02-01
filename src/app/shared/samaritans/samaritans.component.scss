@@ -1,0 +1,39 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  img {
+    width: 440px;
+    height: auto;
+  }
+}
+
+.red-content {
+  background-color: #5c1328;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+
+.line-break-white {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.mat-body p {
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+}

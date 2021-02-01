@@ -1,105 +1,57 @@
 <body>
   <app-header></app-header>
-  <div class="hero">
-    <div class="hero-header">
-      <h1>
-        The UK's Largest Funeral <br />
-        Services Directory TEST REMOVE WHEN YOU SEE ME
-      </h1>
-      <h2>
-        From registerting a death to the wake, we have all the information you will need alongside a select number of specialist companies
-        to help every step of the way.
-      </h2>
-    </div>
-  </div>
-
-  <div class="main-content">
-    <div class="top-content" style="padding-top: 30px">
-      <div fxLayout="row" class="featured">
-        <img class="img-responsive" style="width: 500px" src="assets/img/213.jpg" alt="" />
-        <div fxflex class="featured-text" style="padding-left: 100px; padding-top: 50px; padding-right: 100px">
-          <h1 style="text-align: left">Local Services Directory</h1>
-          <p style="font-size: 20px; font-weight: lighter">
-            In this section you will find relevant local charities and businesses that can provide help or guidance in your time of need,
-            now and in the future.
-          </p>
-          <button style="background-color: #5c1328; color: white; font-size: 20px; height: 50px" mat-button>View Local Services</button>
-        </div>
-      </div>
-
-      <div class="blog-posts" style="margin-top: 50px">
-        <h1 style="font-weight: lighter; font-size: 40px; padding-bottom: 30px">Explore Our Latest Posts <i class="fas fa-blogger"></i></h1>
-        <div fxLayout="row" fxLayoutGap="15px" class="cards">
-          <mat-card [routerLink]="['/grieving']" appMaterialElevation raisedElevation="16" fxflex class="blog-cards">
-            <mat-card-header>
-              <mat-card-title>Coping With Grief</mat-card-title>
-              <mat-card-subtitle style="padding-top: 15px">Help with the grieving process, and services available</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-              <h1>
-                View Articles
-                <span class="material-icons"> arrow_forward </span>
-              </h1>
-            </mat-card-content>
-          </mat-card>
-          <mat-card appMaterialElevation raisedElevation="16" fxflex class="blog-cards">
-            <mat-card-header>
-              <mat-card-title>Coping With Grief</mat-card-title>
-              <mat-card-subtitle style="padding-top: 15px">Help with the grieving process, and services available</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-              <h1>
-                View Articles
-                <span class="material-icons"> arrow_forward </span>
-              </h1>
-            </mat-card-content>
-          </mat-card>
-          <mat-card appMaterialElevation raisedElevation="16" fxflex class="blog-cards">
-            <mat-card-header>
-              <mat-card-title>Coping With Grief</mat-card-title>
-              <mat-card-subtitle style="padding-top: 15px">Help with the grieving process, and services available</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-              <h1>
-                View Articles
-                <span class="material-icons"> arrow_forward </span>
-              </h1>
-            </mat-card-content>
-          </mat-card>
-          <mat-card appMaterialElevation raisedElevation="16" fxflex class="blog-cards">
-            <mat-card-header>
-              <mat-card-title> Coping With Grief</mat-card-title>
-              <mat-card-subtitle style="padding-top: 15px">Help with grieving process, and serilable</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-              <h1>
-                View Articles
-                <span class="material-icons"> arrow_forward </span>
-              </h1>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-    </div>
-
-    <div fxLayout="row" fxLayoutGap="15px" class="lower-content" style="margin-top: 50px">
-      <div fxFlex class="urgent-help">
-        <h1>Do you need urgent help?</h1>
-        <p>
-          If your mental or emotional state quickly gets worse, or you're worried about someone you know - help is available. <br />
+  <div class="container">
+    <div class="hero">
+      <div class="hero-header" fxLayout="column" fxFlex="65">
+        <h1>The UK Bereavement Group</h1>
+        <h2>Here to help you find the services you need</h2>
+        <h2>Search for your local services</h2>
+        <div class="search-form">
+          <mat-form-field appearance="outline" class="example-form-field">
+            <input matInput type="text" [(ngModel)]="value" />
+          </mat-form-field>
           <br />
-          You're not alone; talk to someone you trust. Sharing a problem is often the first step to recovery.
-        </p>
-        <div class="urgent-images">
-          <img width="400px" height="auto" src="assets/img/Samaritans-Number.jpg" alt="" />
-          <img width="400px" height="auto" src="assets/img/Samaritans-Number.jpg" alt="" />
+          <button color="primary" mat-stroked-button>Search</button>
         </div>
       </div>
     </div>
+    <app-blogs></app-blogs>
+
+    <div class="container-70">
+      <h1 style="text-align: center">
+        Our mission statement is “Raising the awareness of the help that is available before and after a death”. <br />
+        This web site is the product of research gathered for the purpose of bringing all the relevant information to the general public in
+        a single place which is both free and comprehensive in material.
+      </h1>
+    </div>
+
+    <div fxLayout="row" class="help-sections" fxLayoutGap="10px">
+      <div fxFlex>
+        <mat-card class="example-card">
+          <img mat-card-image src="../../assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
+          <mat-card-content>
+            <h2>Grief comes in many forms. UKBG offers a comprehensive list of services to help you in your time of grief.</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxFlex>
+        <mat-card class="example-card">
+          <img mat-card-image src="../../assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
+          <mat-card-content>
+            <h2>Grief comes in many forms. UKBG offers a comprehensive list of services to help you in your time of grief.</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxFlex>
+        <mat-card class="example-card">
+          <img mat-card-image src="../../assets/img/maxresdefault.jpg" alt="Photo of a Shiba Inu" />
+          <mat-card-content>
+            <h2>Grief comes in many forms. UKBG offers a comprehensive list of services to help you in your time of grief.</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <app-samaritans></app-samaritans>
   </div>
   <app-footer></app-footer>
 </body>

@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 export class WordpressService {
   constructor(private http: HttpClient) {}
   ukbgmaster = 'http://ukbereavementgroup.co.uk/wordpress/wp-json/wp/v2/';
-  grieving = 'http://ukbereavementgroup.co.uk/wordpress/wp-json/wp/v2/grieving';
+  grieving = 'http://ukbereavementgroup.co.uk/wordpress/wp-json/wp/v2/posts';
   getPosts() {
-    return this.http.get(this.ukbgmaster + 'grieving?_embed');
+    return this.http.get(this.ukbgmaster + 'posts?_embed');
   }
 
   getPostDetail(id: number): Observable<any> {

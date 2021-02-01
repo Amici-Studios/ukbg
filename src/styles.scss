@@ -17,3 +17,8 @@ h3,
 h4 {
   font-family: 'Lato', sans-serif !important;
 }
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  margin: 0;
+}

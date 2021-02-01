@@ -1,4 +1,3 @@
-import { WordpressService } from './../../../shared/services/wordpress.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grieving.component.scss'],
 })
 export class GrievingComponent implements OnInit {
-  constructor(private wp: WordpressService) {}
-  posts: any;
-  ngOnInit(): void {
-    this.loadBlogPosts();
-  }
-  async loadBlogPosts() {
-    this.wp.getPosts().subscribe((res) => {
-      this.posts = res;
-      console.log(res);
-    });
-  }
+  constructor() {}
+  ngOnInit(): void {}
 }

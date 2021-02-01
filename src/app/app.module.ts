@@ -1,3 +1,4 @@
+import { SafeHtmlPipe } from './../pipes/safe-html.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -65,6 +66,10 @@ import { MatTableModule } from '@angular/material/table';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { GrievingComponent } from './pages/grief/grieving/grieving.component';
 import { NewlyBereavedComponent } from './pages/grief/newly-bereaved/newly-bereaved.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SamaritansComponent } from './shared/samaritans/samaritans.component';
+import { BlogsComponent } from './shared/blogs/blogs.component';
+import { BlogDetailComponent } from './shared/blogs/blog-detail/blog-detail.component';
 
 const config = {
   apiKey: 'AIzaSyChHiRyORBpy212F1Jc73RZD6wLpg2BplU',
@@ -87,6 +92,10 @@ const config = {
     FooterComponent,
     GrievingComponent,
     NewlyBereavedComponent,
+    SamaritansComponent,
+    BlogsComponent,
+    BlogDetailComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +105,7 @@ const config = {
     AngularFireAuthModule,
     AppRoutingModule,
     CommonModule,
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,

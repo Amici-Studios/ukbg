@@ -55,31 +55,8 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <h1>Lates Blog Posts</h1>
-    <div class="line-break-red"></div>
-    <div>
-      <div fxFlex *ngFor="let post of posts; let i = index">
-        <div class="cards">
-          <mat-card [routerLink]="['/grieving', post.id]" appMaterialElevation raisedElevation="16" fxflex>
-            <mat-card-header>
-              <mat-card-title>{{ post.title.rendered }}</mat-card-title>
-              <mat-card-subtitle>{{ post.date | date: 'EEEE,  MMMM d , y' }}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="{{ post.main_image.guid }}" alt="Photo of a Shiba Inu" />
-            <mat-card-content>
-              <h2>
-                Read More
-                <span class="material-icons"> arrow_forward </span>
-              </h2>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-
+<app-blogs></app-blogs>
 <!-- <div class="second-content">
   <h1>Lates App Blog Posts</h1>
   <div class="cardList">
