@@ -23,7 +23,7 @@
   </form>
   <div fxLayout="row" fxLayoutGap="16px" style="margin-bottom: 5px">
     <mat-card
-      routerLink="{{ office.id }}"
+      routerLink="office-detail/{{ office.id }}"
       fxFlex="32"
       class="example-card"
       *ngFor="let office of offices | filter: office; let i = index"
@@ -31,10 +31,8 @@
     >
       <img mat-card-image class="imgsame" [src]="office.imgURL" style="margin-bottom: 0" />
       <mat-card-content>
-        <mat-card-title style="font-weight: bold; font-family: montserrat; font-size: 18px; margin-top: 5px">{{
-          office.office
-        }}</mat-card-title>
-        <mat-card-subtitle style="font-weight: bold; font-family: montserrat">{{ office.telephone }}</mat-card-subtitle>
+        <mat-card-title style="font-weight: bold; font-size: 18px; margin-top: 5px">{{ office.office }}</mat-card-title>
+        <mat-card-subtitle style="font-weight: bold">{{ office.telephone }}</mat-card-subtitle>
         <p>
           {{ office.address1 }} <br />
           {{ office.address2 }} <br />
@@ -55,10 +53,8 @@
     >
       <img mat-card-image class="imgsame" src="/assets/img/About_Us_Header.jpg" style="margin-bottom: 0" />
       <mat-card-content>
-        <mat-card-title style="font-weight: bold; font-family: montserrat; font-size: 18px; margin-top: 5px">{{
-          charity.names[0].value
-        }}</mat-card-title>
-        <mat-card-subtitle style="font-weight: bold; font-family: montserrat">{{ charity.contact.phone }}</mat-card-subtitle>
+        <mat-card-title style="font-weight: bold; font-size: 18px; margin-top: 5px">{{ charity.names[0].value }}</mat-card-title>
+        <mat-card-subtitle style="font-weight: bold">{{ charity.contact.phone }}</mat-card-subtitle>
         <p>
           {{ charity.contact.address[0] }}
           <br />

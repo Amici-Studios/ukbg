@@ -8,7 +8,7 @@ import { BlogDetailComponent } from './shared/blogs/blog-detail/blog-detail.comp
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'offices', component: OfficesComponent },
-  { path: 'office-detail', component: OfficeDetailComponent },
+  { path: 'offices/office-detail/:id', component: OfficeDetailComponent },
   { path: 'grieving', component: GrievingComponent },
   { path: 'blog/:id', component: BlogDetailComponent },
 ];
