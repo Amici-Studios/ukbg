@@ -99,6 +99,7 @@ const config = {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
     AngularFireStorageModule,

@@ -1,5 +1,13 @@
 <div class="container">
-  <div fxLayout="row" class="user"></div>
+  <div class="user" fxLayoutAlign="end">
+    <div>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <a [routerLink]="['/office-detail']">LOGIN</a>
+        <a [routerLink]="['/office-detail']">REGISTER</a>
+        <a [routerLink]="['/office-detail']">MY ACCOUNT</a>
+      </div>
+    </div>
+  </div>
   <div class="top-header">
     <div class="logo">
       <img [routerLink]="['/']" src="assets/img/ukbglogo.png" alt="" />

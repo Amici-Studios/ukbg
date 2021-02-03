@@ -8,3 +8,23 @@ img {
   object-fit: cover;
   object-position: center; /* this centers and crops the image so that it doesn't break the aspect ratio */
 }
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* Column Gap */
+.cardList > * {
+  box-sizing: border-box;
+}
+
+/* Item sizing */
+.cardListItem {
+  flex: 0 1 calc(25% - 20px);
+  margin: 10px;
+}
+mat-card-header {
+  height: 100px;
+}
