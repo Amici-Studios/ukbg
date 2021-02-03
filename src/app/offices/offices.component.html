@@ -51,7 +51,7 @@
       *ngFor="let charity of charities?.data.CHC.getCharities.list | filter: office; let i = index"
       [@simpleFadeAnimation]="'in'"
     >
-      <img mat-card-image class="imgsame" src="/assets/img/About_Us_Header.jpg" style="margin-bottom: 0" />
+      <img mat-card-image class="imgsame" src="assets/img/About_Us_Header.jpg" style="margin-bottom: 0" />
       <mat-card-content>
         <mat-card-title style="font-weight: bold; font-size: 18px; margin-top: 5px">{{ charity.names[0].value }}</mat-card-title>
         <mat-card-subtitle style="font-weight: bold">{{ charity.contact.phone }}</mat-card-subtitle>
