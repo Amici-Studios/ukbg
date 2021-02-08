@@ -8,9 +8,8 @@ describe('OfficeDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OfficeDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [OfficeDetailComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

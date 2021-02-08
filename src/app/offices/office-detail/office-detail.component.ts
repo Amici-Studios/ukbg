@@ -12,7 +12,7 @@ export class OfficeDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private firestore: FirestoreService) {}
   officeDetail: any;
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.officeDetail = this.firestore.getOfficeDetails(`office-details/${id}`);
+    // const id = this.route.snapshot.paramMap.get('id');
+    // this.officeDetail = this.firestore.getOfficeDetails(`office-details/${id}`);
   }
 }
