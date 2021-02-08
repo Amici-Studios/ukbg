@@ -1,4 +1,4 @@
-import { GrievingComponent } from './pages/grief/grieving/grieving.component';
+import { GrievingComponent } from './pages/grieving/grieving.component';
 import { OfficesComponent } from './offices/offices.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
