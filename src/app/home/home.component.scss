@@ -1,50 +1,8 @@
-.container-70 {
-  max-width: 70%;
-  margin: 0 auto;
-}
-
-.hero {
-  height: 700px;
-  width: 100%;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../../assets/img/About_Us_Header.jpg);
-  // background-image: url(../../assets/img/);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero-header {
-  text-align: center;
-  padding-top: 250px;
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  margin: 0 auto;
-}
-
-.help-sections {
+.container {
   margin: 0 auto;
   width: 70%;
-  text-align: center;
-  p {
-    font-size: 1.4em;
-  }
-  mat-card-title {
-    font-size: 2em;
-  }
-}
-
-mat-form-field {
-  font-size: 15px;
 }
 
 .mission-statement {
-  background-color: #5c1327;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-  padding: 15px 0;
-  margin: 15px 0;
+  padding-top: 50px;
 }
