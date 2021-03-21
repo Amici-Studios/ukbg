@@ -1,8 +1,43 @@
-.container {
+.container-fluid {
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
 }
 
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.hero {
+}
 .mission-statement {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.search {
   padding-top: 50px;
+}
+
+.search-outer {
+  background-image: url(/assets/img/213.jpg);
+}
+
+.search-box {
+  margin-left: 30px;
+  h1 {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
+
+.main-search {
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.main-search-field {
+  width: 90%;
+  padding: 10px;
+  text-decoration: none;
 }
